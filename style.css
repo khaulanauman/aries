@@ -1,0 +1,184 @@
+
+  
+*{
+    box-sizing: border-box;
+}
+body{
+    background-image: url('bg.jpg');
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+nav,footer,button,.explore{
+    background-image: url('21350.jpg');
+}
+.aries-logo img{
+    width: 100px;
+}
+nav,footer{
+    width: 600px;
+    height: 120px;
+    border-radius: 70px;
+}
+
+nav,.hero.explore,ul,header,main,footer,.hero-text,footer p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+main,nav,footer{
+    flex-direction: column;
+}
+body{
+    margin: 0; padding: 0; display: flex; flex-direction: column; align-items: center;
+}
+footer{
+    width: 100%; max-width: 600px; margin: 20px 0;
+}
+.hero,.explore,footer,nav{
+    margin-top: 40px;
+}
+.hero{
+    height: 500px;
+    text-align: center;
+}
+.hero-text{
+    width: 45%;
+    float: left;
+}
+.hero-img{
+    width: 55%;
+    float: right;
+}
+.hero-img,.hero-text{
+    height: 100%;
+}
+.hero-img img{
+    width: 100%;
+    height: 100%;
+    object-fit:contain;
+}
+.hero-text h1,h3,.story-text,.game-text{
+    color:#2F4F4F;
+}
+nav a{
+    padding: 10px 15px;
+   text-decoration: none; 
+   color:  #2F4F4F;
+   font-size: 16px;
+}
+nav a:hover{
+    color: #426d6d;
+}
+
+ul{
+    justify-content: space-between;
+}
+ul li{
+    color:  #2F4F4F;
+    list-style: none;
+}
+.explore{
+    width: 80%;
+    height: 800px;
+    border-radius: 20px;
+}
+#story-link iframe,#joke-link,#game-link iframe{
+    width: 550px;
+    height: 315px;
+    border: 5px solid #2F4F4F;
+    border-radius: 20px;
+}/* 
+#story-link iframe, #game-link iframe{
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+} */
+button{
+    background-color: #FFDAB9; /* Light Peach */
+  color: #2F4F4F; /* Darker shade of Soft Blue or Soft Green */
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 12px 24px;
+
+}
+
+/* General styles */
+* {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+  }
+  
+  /* Responsive layout adjustments */
+  @media screen and (max-width: 768px) {
+    /* Styles for mobile and smaller screens */
+    header, nav, footer, .explore {
+      background-image: none; /* Remove background images on small screens */
+    }
+  
+    nav, footer {
+      width: 100%;
+      height: auto; /* Allow elements to adjust height */
+      border-radius: 0; /* Remove rounded corners */
+    }
+  
+    .aries-logo img {
+      width: 50%;
+      margin: 10px auto; /* Center logo on smaller screens */
+    }
+  
+    nav, footer, .hero-text, .explore, .story-text, .game-text {
+      display: flex;
+      flex-direction: column; /* Stack elements vertically */
+      align-items: center;
+      text-align: center;
+    }
+  
+    main, nav, footer {
+      flex-direction: column;
+    }
+  
+    .hero, .explore {
+      margin-top: 20px; /* Reduce margin for better layout */
+    }
+  
+    .hero {
+      height: auto; /* Allow hero section to adjust height */
+    }
+  
+    .hero-text, .hero-img {
+      width: 100%; /* Display hero content full width */
+      float: none; /* Remove float for vertical stacking */
+    }
+  
+    .explore {
+      width: 90%; /* Adjust explore section width */
+      border-radius: 0; /* Remove rounded corners */
+    }
+  
+    #story-link iframe, #game-link iframe {
+      width: 100%; /* Set iframe width to 100% */
+      height: 250px; /* Adjust iframe height for smaller screens */
+      border: none; /* Remove border for cleaner look */
+      border-radius: 4px; /* Add subtle rounded corners */
+    }
+  }
+  
+  /* Maintain some styles for larger screens (optional) */
+  @media screen and (min-width: 768px) {
+    nav, footer {
+      border-radius: 70px; /* Re-enable rounded corners */
+    }
+  
+    .explore {
+      border-radius: 20px; /* Re-enable rounded corners */
+    }
+  }
