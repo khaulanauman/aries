@@ -1,13 +1,67 @@
+@font-face {
+  font-family: 'comic_sans_msregular';
+  src: url('comic-webfont.woff2') format('woff2'),
+       url('comic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 
-  
-*{
-    box-sizing: border-box;
+}
+ /*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+  text-align: center;
+font-family: 'comic_sans_msregular', sans-serif;
+}
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  5. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  6. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+/*
+  7. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6{
+  overflow-wrap: break-word;
+  letter-spacing: 1px;
+ 
+}
+/*
+  8. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
 }
 body{
     background-image: url('bg.jpg');
-    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-family: "comic_sans_msregular", sans-serif;
+    margin: 0; padding: 0; display: flex; flex-direction: column; align-items: center;
 }
-nav,footer,button,.explore{
+nav,footer,button,.explore div {
     background-image: url('21350.jpg');
 }
 .aries-logo img{
@@ -19,7 +73,7 @@ nav,footer{
     border-radius: 70px;
 }
 
-nav,.hero.explore,ul,header,main,footer,.hero-text,footer p{
+nav,.hero.explore,.explore div,ul,header,main,footer,.hero-text,footer p{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -28,13 +82,13 @@ nav,.hero.explore,ul,header,main,footer,.hero-text,footer p{
 main,nav,footer{
     flex-direction: column;
 }
-body{
-    margin: 0; padding: 0; display: flex; flex-direction: column; align-items: center;
+.explore div{
+  flex-direction: column;
 }
 footer{
     width: 100%; max-width: 600px; margin: 20px 0;
 }
-.hero,.explore,footer,nav{
+.hero,.explore,.explore div,nav{
     margin-top: 40px;
 }
 .hero{
@@ -78,24 +132,17 @@ ul li{
     list-style: none;
 }
 .explore{
-    width: 80%;
-    height: 800px;
+  width: 70%;
+  height: 50%;
+    border-radius: 20px;
+    
+}
+#story-link iframe,#game-link iframe{
+    width: 550px;
     border-radius: 20px;
 }
-#story-link iframe,#joke-link,#game-link iframe{
-    width: 550px;
-    height: 315px;
-    border: 5px solid #2F4F4F;
-    border-radius: 20px;
-}/* 
-#story-link iframe, #game-link iframe{
-    border-radius: 20px;
-    width: 100%;
-    height: 100%;
-    position: relative;
-} */
 button{
-    background-color: #FFDAB9; /* Light Peach */
+  background-color: #FFDAB9; /* Light Peach */
   color: #2F4F4F; /* Darker shade of Soft Blue or Soft Green */
   font-size: 16px;
   text-align: center;
@@ -106,22 +153,12 @@ button{
   padding: 12px 24px;
 
 }
-
-/* General styles */
-* {
-    box-sizing: border-box;
-  }
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Comic Sans MS', cursive, sans-serif;
-  }
   
   /* Responsive layout adjustments */
   @media screen and (max-width: 768px) {
     /* Styles for mobile and smaller screens */
     header, nav, footer, .explore {
-      background-image: none; /* Remove background images on small screens */
+      background-image:url("21350.jpg"); /* Remove background images on small screens */
     }
   
     nav, footer {
