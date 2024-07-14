@@ -56,13 +56,32 @@ p, h1, h2, h3, h4, h5, h6{
 #root, #__next {
   isolation: isolate;
 }
+:root{
+  --primaryColor:#2F4F4F;
+  --secodnaryColor:#FFDAB9;
+  --body-bg-img:url('blue-bg.jpg');
+  --div-bg-img:url('21350.jpg');
+}
+body.purple{
+  --primaryColor:#5732a0;
+  --secodnaryColor:#FFDAB9;
+  --body-bg-img:url('purple-bg.jpg');
+  --div-bg-img:url('beigee.jpg');
+}
+body.yellow{
+  --primaryColor:#4B0082;
+  --secodnaryColor:#FFDAB9;
+  --body-bg-img:url('21350.jpg');
+  --div-bg-img:url('purple-bg.jpg');
+}
+
 body{
-    background-image: url('bg.jpg');
+    background-image: var(--body-bg-img);
     font-family: "comic_sans_msregular", sans-serif;
     margin: 0; padding: 0; display: flex; flex-direction: column; align-items: center;
 }
 nav,footer,button,.explore div {
-    background-image: url('21350.jpg');
+    background-image: var(--div-bg-img);
 }
 .aries-logo img{
     width: 100px;
@@ -112,23 +131,23 @@ footer{
     object-fit:contain;
 }
 .hero-text h1,h3,.story-text,.game-text{
-    color:#2F4F4F;
+    color:var(--primaryColor);
 }
 nav a{
     padding: 10px 15px;
    text-decoration: none; 
-   color:  #2F4F4F;
+   color:  var(--primaryColor);
    font-size: 16px;
 }
 nav a:hover{
-    color: #426d6d;
+    font-size: large;
 }
 
 ul{
     justify-content: space-between;
 }
 ul li{
-    color:  #2F4F4F;
+    color:  var(--primaryColor);
     list-style: none;
 }
 .explore{
@@ -142,8 +161,8 @@ ul li{
     border-radius: 20px;
 }
 button{
-  background-color: #FFDAB9; /* Light Peach */
-  color: #2F4F4F; /* Darker shade of Soft Blue or Soft Green */
+  background-color: var(--secodnaryColor); /* Light Peach */
+  color: var(--primaryColor); /* Darker shade of Soft Blue or Soft Green */
   font-size: 16px;
   text-align: center;
   text-decoration: none;
@@ -153,13 +172,39 @@ button{
   padding: 12px 24px;
 
 }
+form {
+  background-image: var(--body-bg-img);
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 5px solid #dddddd;
+}
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+input, select {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+}
+form button {
+  background-image: var(--div-bg-img);
+  color: var(--primaryColor);
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
   
   /* Responsive layout adjustments */
   @media screen and (max-width: 768px) {
     /* Styles for mobile and smaller screens */
-    header, nav, footer, .explore {
-      background-image:url("21350.jpg"); /* Remove background images on small screens */
-    }
+    
   
     nav, footer {
       width: 100%;

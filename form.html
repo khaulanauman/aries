@@ -3,46 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="aries-logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="aries-logo.png" type="image/x-icon">
+    <script defer="defer" src="main.js"></script> 
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap');
+    </style>
   <title>Tell Me About Yourself!</title>
-  <style>
-    /* Basic styling for the form */
-    body {
-      background-image: url('bg.jpg');
-    }
-    form {
-      background-image: url('bg.jpg');
-      display: flex;
-      flex-direction: column;
-      width: 400px;
-      margin: 0 auto;
-      padding: 20px;
-      border: 5px solid #dddddd;
-    }
-    label {
-      display: block;
-      margin-bottom: 5px;
-    }
-    input, select {
-      padding: 10px;
-      margin-bottom: 15px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      width: 100%;
-    }
-    button {
-      background-image: url('21350.jpg');
-      color: #2F4F4F;
-      padding: 12px 20px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-  </style>
 </head>
 <body>
+  <header>
+    <nav>
+        <div class="aries-logo"><img aries-log src="aries-logo.png" alt="Website-logo"></div>
+        <ul>
+            <li><a href="index.html">my home</a></li>
+            <li><a href="games.html">my games </a></li>
+            <li><a href="stories.html">my stories</a></li>
+            <li><a href="form.html">my path</a></li>
+        </ul>
+    </nav>
+</header>
   <h1>Tell Me About Yourself!</h1>
-  <form id="myForm" action="submit.php" method="post">
+  <form id="myForm" onsubmit="handleSubmit(event)">
     <label for="name">Name:</label>
     <input type="text" id="name" name="name" required>
 
@@ -50,24 +32,25 @@
     <input type="number" id="age" name="age" min="0" required>
 
     <label for="favColor">Favorite Color:</label>
-    <input type="text" id="favColor" name="favColor" required>
+    <select name="favColor" id="favColor">
+      <option value="blue">Blue</option>
+      <option value="purple">Purple</option>
+      <option value="pink">Pink</option>
+      <option value="yellow">Yellow</option>
+    </select>
 
-    <label for="favFood">Favorite Food:</label>
+    <!-- <label for="favFood">Favorite Food:</label>
     <input type="text" id="favFood" name="favFood" required>
 
     <label for="favCartoon">Favorite Cartoon:</label>
-    <input type="text" id="favCartoon" name="favCartoon" required>
+    <input type="text" id="favCartoon" name="favCartoon" required> -->
 
     <button type="submit">Submit</button>
   </form>
-  <script>
-    document.getElementById('myForm').addEventListener('submit', function(event) {
-      event.preventDefault(); // Prevent the default form submission
-      alert("Thank you for submitting");
-      // Clear the form
-      this.reset();
-    });
-  </script>
+  <footer>
+    <div class="aries-logo"><img src="aries-logo.png" alt="Website-logo"></div>
+    <p>&copy; 2024 Khaula Nauman. All rights reserved.</p>
+</footer>
 </body>
 </html>
     
