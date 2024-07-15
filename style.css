@@ -62,8 +62,9 @@ p, h1, h2, h3, h4, h5, h6{
   --body-bg-img:url('blue-bg.jpg');
   --div-bg-img:url('21350.jpg');
 }
+/* themes based on user's choice */
 body.purple{
-  --primaryColor:#5732a0;
+  --primaryColor:#482545;
   --secodnaryColor:#FFDAB9;
   --body-bg-img:url('purple-bg.jpg');
   --div-bg-img:url('beigee.jpg');
@@ -86,7 +87,7 @@ nav,footer,button,.explore div {
 .aries-logo img{
     width: 100px;
 }
-nav,footer{
+nav{
     width: 600px;
     height: 120px;
     border-radius: 70px;
@@ -102,12 +103,13 @@ main,nav,footer{
     flex-direction: column;
 }
 .explore div{
+  padding: 1rem;
   flex-direction: column;
 }
 footer{
     width: 100%; max-width: 600px; margin: 20px 0;
 }
-.hero,.explore,.explore div,nav{
+.hero,.explore div,nav{
     margin-top: 40px;
 }
 .hero{
@@ -153,12 +155,26 @@ ul li{
 .explore{
   width: 70%;
   height: 50%;
-    border-radius: 20px;
+  border-radius: 20px;
     
 }
 #story-link iframe,#game-link iframe{
     width: 550px;
     border-radius: 20px;
+    margin-bottom: 1rem;
+}
+.game-text,.story-text{
+  margin-bottom: 2rem;
+}
+#personal-path{
+  width: 40ch;
+  margin: 2rem 0 2rem 0;
+  border: 5px solid var(--primaryColor);
+  padding: 2rem;
+  border-radius: 10px;
+}
+#personal-path button{
+  margin-top: 2rem;
 }
 button{
   background-color: var(--secodnaryColor); /* Light Peach */
@@ -172,6 +188,7 @@ button{
   padding: 12px 24px;
 
 }
+/* form styling */
 form {
   background-image: var(--body-bg-img);
   display: flex;
